@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd" >
+<xliff version="1.0">
+    <file source-language="en" target-language="ru" datatype="plaintext" original="dinNewsAdmin.ru.xml">
+        <header/>
+        <body>
+
+        <!-- Titles -->
+            <trans-unit id="titles.list">
+                <source>titles.list</source>
+                <target>Новости</target>
+            </trans-unit>
+            <trans-unit id="titles.edit">
+                <source>titles.edit.%%title%%</source>
+                <target><![CDATA[Редактирование новости &laquo;%%title%%&raquo;]]></target>
+            </trans-unit>
+            <trans-unit id="titles.new">
+                <source>titles.new</source>
+                <target>Добавление новости</target>
+            </trans-unit>
+
+        <!-- Form fieldsets -->
+            <trans-unit id="fieldsets.base">
+                <source>fieldsets.base</source>
+                <target>Основные</target>
+            </trans-unit>
+            <trans-unit id="fieldsets.def">
+                <source>fieldsets.def</source>
+                <target>Содержание</target>
+            </trans-unit>
+            <trans-unit id="fieldsets.ru">
+                <source>fieldsets.ru</source>
+                <target>Русский</target>
+            </trans-unit>
+            <trans-unit id="fieldsets.en">
+                <source>fieldsets.en</source>
+                <target>Английский</target>
+            </trans-unit>
+            <trans-unit id="fieldsets.uk">
+                <source>fieldsets.uk</source>
+                <target>Украинский</target>
+            </trans-unit>
+
+        <!-- Field labels -->
+            <trans-unit id="fieldLabels.title">
+                <source>fieldLabels.title</source>
+                <target>Заголовок</target>
+            </trans-unit>
+            <trans-unit id="fieldLabels.category">
+                <source>fieldLabels.category</source>
+                <target>Категория</target>
+            </trans-unit>
+            <trans-unit id="fieldLabels.isPublished">
+                <source>fieldLabels.isPublished</source>
+                <target>Опубликована?</target>
+            </trans-unit>
+            <trans-unit id="fieldLabels.publishedAt">
+                <source>fieldLabels.publishedAt</source>
+                <target>Дата публикации</target>
+            </trans-unit>
+            <trans-unit id="fieldLabels.body">
+                <source>fieldLabels.body</source>
+                <target>Текст</target>
+            </trans-unit>
+            <trans-unit id="fieldLabels.anonce">
+                <source>fieldLabels.anonce</source>
+                <target>Анонс</target>
+            </trans-unit>
+            <trans-unit id="fieldLabels.uri">
+                <source>fieldLabels.uri</source>
+                <target>Идентификатор</target>
+            </trans-unit>
+            <trans-unit id="fieldLabels.author">
+                <source>fieldLabels.author</source>
+                <target>Автор</target>
+            </trans-unit>
+
+
+        <!-- Auxiliary labels -->
+            <trans-unit id="labels.isEmpty">
+                <source>labels.isEmpty</source>
+                <target>Нет значения?</target>
+            </trans-unit>
+            <trans-unit id="labels.yesOrNo">
+                <source>labels.yesOrNo</source>
+                <target>Любое</target>
+            </trans-unit>
+            <trans-unit id="labels.yes">
+                <source>labels.yes</source>
+                <target>Да</target>
+            </trans-unit>
+            <trans-unit id="labels.no">
+                <source>labels.no</source>
+                <target>Нет</target>
+            </trans-unit>
+            <trans-unit id="labels.fromDate">
+                <source>labels.fromDate</source>
+                <target>С</target>
+            </trans-unit>
+            <trans-unit id="labels.toDate">
+                <source>labels.toDate</source>
+                <target>по</target>
+            </trans-unit>
+            <trans-unit id="labels.min">
+                <source>labels.min</source>
+                <target>С</target>
+            </trans-unit>
+            <trans-unit id="labels.max">
+                <source>labels.max</source>
+                <target>по</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

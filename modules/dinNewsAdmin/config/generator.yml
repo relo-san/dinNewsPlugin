@@ -1,0 +1,98 @@
+
+# This file is part of the dinNewsPlugin package.
+# (c) DineCat, 2010 http://dinecat.com/
+#
+# For the full copyright and license information, please view the LICENSE file,
+# that was distributed with this package, or see http://www.dinecat.com/din/license.html
+
+# dinNewsAdmin generator configuration
+#
+# @package     dinNewsPlugin
+# @subpackage  modules.dinNewsAdmin
+# @author      Nicolay N. Zyk <relo.san@gmail.com>
+
+plugin:                             'dinNewsPlugin'
+
+generator:
+    class:                          'dinDoctrineGenerator'
+
+    param:
+
+        actions_base_class:         'dinActions'
+        model_class:                'DinNews'
+        theme:                      'admin'
+        non_verbose_templates:      true
+        with_show:                  false
+        singular:                   null
+        plural:                     null
+        route_prefix:               'din_news_admin'
+        with_doctrine_route:        true
+        css:                        false
+        i18n_catalogue:             'adm-news'
+
+        config:
+
+            actions:                null
+
+            fields:
+                title:              { label: 'fieldLabels.title' }
+                published_at:       { label: 'fieldLabels.publishedAt', type: 'Date' }
+                category:           { label: 'fieldLabels.category' }
+                category_id:        { label: 'fieldLabels.category' }
+                is_published:       { label: 'fieldLabels.isPublished' }
+                author:             { label: 'fieldLabels.author' }
+                state_id:           { label: 'fieldLabels.state' }
+                state:              { label: 'fieldLabels.state' }
+                uri:                { label: 'fieldLabels.uri' }
+                anonce:             { label: 'fieldLabels.anonce' }
+                body:               { label: 'fieldLabels.body' }
+
+            list:
+                title:              'titles.list'
+                display:            ['category', 'title', 'is_published', 'published_at']
+                table_method:       'retrieveWithI18n'
+                pager_class:        'dinDoctrinePager'
+                actions:
+                    _new:
+                        params:     { ajax: 'action' }
+                object_actions:
+                    _edit:
+                        params:     { ajax: 'action' }
+                    _delete:
+                        params:     { ajax: 'post' }
+                sort:
+                    title:          { columns: ['title'] }
+                    is_published:   { columns: ['is_published'] }
+                    published_at:   { columns: ['published_at'] }
+                    uri:            { columns: ['uri'] }
+                    state:          { columns: ['state_id'] }
+                    category:       { columns: ['category_id'] }
+
+            filter:
+                display:            ['is_published', 'published_at', 'title', 'body']
+
+            form:
+                display:
+                    fieldsets.base: ['category_id', 'title', 'is_published', 'published_at']
+                    fieldsets.def:  ['body']
+
+            edit:
+                title:              'titles.edit.%%title%%'
+                actions:
+                    _delete:
+                        params:     { ajax: 'action' }
+                    _save:          null
+                    _list:
+                        params:     { ajax: 'action' }
+
+            new:
+                title:              'titles.new'
+                actions:
+                    _save_and_add:  null
+                    _save:          null
+                    _list:
+                        params:     { ajax: 'action' }
+
+            show:                   null
+
+#EOF

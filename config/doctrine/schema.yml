@@ -16,14 +16,13 @@ DinNewsCategory:
 
     actAs:
         I18n:
-            fields:         ['is_published', 'title', 'uri', 'description']
-            unique:         ['uri']
+            fields:         ['is_published', 'title', 'description']
 
     columns:
         id:                 { type: 'integer(4)', primary: true, autoincrement: true }
         is_published:       { type: 'boolean', notnull: true, default: true }
-        title:              { type: 'string(150)', fixed: true }
-        uri:                { type: 'string(50)', fixed: true }
+        title:              { type: 'string(150)' }
+        uri:                { type: 'string(50)' }
         description:        { type: 'clob(65532)' }
 
     indexes:
@@ -36,18 +35,17 @@ DinNews:
 
     actAs:
         I18n:
-            fields:         ['is_published', 'published_at', 'title', 'uri', 'anonce', 'body']
-            unique:         ['uri']
+            fields:         ['is_published', 'published_at', 'title', 'anonce', 'body']
 
     columns:
         id:                 { type: 'integer(4)', primary: true, autoincrement: true }
-        category_id:        { type: 'integer(4)' }
+        category_id:        { type: 'integer(4)', notnull: true }
         author_id:          { type: 'integer(4)' }
         is_published:       { type: 'boolean', notnull: true, default: true }
         published_at:       { type: 'timestamp' }
         state_id:           { type: 'integer(2)' }
-        title:              { type: 'string(250)', fixed: true }
-        uri:                { type: 'string(50)', fixed: true }
+        title:              { type: 'string(250)' }
+        uri:                { type: 'string(50)' }
         anonce:             { type: 'clob(65532)' }
         body:               { type: 'clob' }
 
